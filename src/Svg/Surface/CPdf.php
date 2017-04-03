@@ -3171,14 +3171,13 @@ EOT;
      * rotate
      *
      * @param float $angle angle in degrees for counter-clockwise rotation
-     * @param float $x     Origin abscisse
+     * @param float $x     Origin abscissa
      * @param float $y     Origin ordinate
      */
     function rotate($angle, $x, $y)
     {
-        $y = $this->currentPageSize["height"] - $y;
-
-        $a = deg2rad($angle);
+        //For some reason the angles were inverted :/
+        $a = deg2rad(-$angle);
         $cos_a = cos($a);
         $sin_a = sin($a);
 
