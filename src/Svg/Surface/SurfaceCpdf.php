@@ -77,19 +77,11 @@ class SurfaceCpdf implements SurfaceInterface
         $this->transform($x, 0, 0, $y, 0, 0);
     }
 
-    public function rotate($angle)
+    public function rotate($angle, $x = 0, $y = 0)
     {
         if (self::DEBUG) echo __FUNCTION__ . "\n";
 
-        $a = deg2rad($angle);
-        $cos_a = cos($a);
-        $sin_a = sin($a);
-
-        $this->transform(
-            $cos_a,                         $sin_a,
-            -$sin_a,                         $cos_a,
-            0, 0
-        );
+        $this->canvas->rotate($angle, $x, $y);
     }
 
     public function translate($x, $y)

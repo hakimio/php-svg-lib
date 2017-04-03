@@ -24,7 +24,7 @@ interface SurfaceInterface
     // transformations (default transform is the identity matrix)
     public function scale($x, $y);
 
-    public function rotate($angle);
+    public function rotate($angle, $x, $y);
 
     public function translate($x, $y);
 
