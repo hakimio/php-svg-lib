@@ -428,6 +428,7 @@ class SurfaceCpdf implements SurfaceInterface
 
             "arial"      => "Helvetica",
             "verdana"    => "Helvetica",
+            "helvetica"  => "Helvetica"
         );
 
         $styleMap = array(
